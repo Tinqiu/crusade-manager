@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Collections;
 
 /**
- * H2 implementation of the {@link CrusadeRepositoryPort} implementation.
+ * H2 implementation of the {@link CrusadeRepositoryPort} interface.
  */
 @Repository
 @RequiredArgsConstructor
