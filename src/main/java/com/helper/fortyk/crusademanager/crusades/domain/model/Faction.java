@@ -1,4 +1,4 @@
-package com.helper.fortyk.crusademanager.crusades.domain.model.crusade.crusadeforce;
+package com.helper.fortyk.crusademanager.crusades.domain.model;
 
 public enum Faction {
     IMPERIUM,

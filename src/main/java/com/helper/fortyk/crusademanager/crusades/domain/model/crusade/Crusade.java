@@ -1,6 +1,6 @@
 package com.helper.fortyk.crusademanager.crusades.domain.model.crusade;
 
-import com.helper.fortyk.crusademanager.crusades.domain.model.crusade.crusadeforce.CrusadeForce;
+import com.helper.fortyk.crusademanager.crusades.domain.model.crusadeforce.CrusadeForce;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -19,9 +19,5 @@ public class Crusade {
         this.id = id;
         this.username = username;
         this.crusadeForces.addAll(crusadeForces);
-    }
-
-    public void addCrusadeForce(CrusadeForce crusadeForce){
-        this.crusadeForces.add(crusadeForce);
     }
 }
