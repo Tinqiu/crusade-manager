@@ -16,7 +16,9 @@ class CrusadeWebService {
     }
 
     public CrusadeIdResponse create(CrusadeRequest crusadeRequest) {
-        var crusadeId = crusadeService.create(crusadeRequest.getUsername());
+        var crusadeId = crusadeService.create(
+                crusadeRequest.getCrusadeForce1(),
+                crusadeRequest.getCrusadeForce2());
         return CrusadeIdResponse.of(crusadeId);
     }
 }

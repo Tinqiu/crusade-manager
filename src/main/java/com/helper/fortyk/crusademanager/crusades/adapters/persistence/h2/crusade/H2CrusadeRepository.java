@@ -26,8 +26,8 @@ class H2CrusadeRepository implements CrusadeRepositoryPort {
     public CrusadeId create(CrusadeForce crusadeForce1,
                             CrusadeForce crusadeForce2,
                             CrusadeForce... crusadeForces) {
-        var h2Entity = new H2CrusadeEntity(new H2CrusadeIdEntity(),
+        var h2Crusade = new H2CrusadeEntity(new H2CrusadeIdEntity(),
                 Collections.emptyList());
-        return jpaCrusadeRepository.save(h2Entity).toCrusade().getId();
+        return jpaCrusadeRepository.save(h2Crusade).toCrusade().getId();
     }
 }
