@@ -1,5 +1,6 @@
-package com.helper.fortyk.crusademanager.crusades.adapters.persistence.h2;
+package com.helper.fortyk.crusademanager.crusades.adapters.persistence.h2.crusade;
 
+import com.helper.fortyk.crusademanager.crusades.adapters.persistence.h2.crusadeforce.H2CrusadeForceEntity;
 import com.helper.fortyk.crusademanager.crusades.domain.model.crusade.Crusade;
 import com.helper.fortyk.crusademanager.crusades.domain.model.crusade.CrusadeId;
 import lombok.AccessLevel;
@@ -17,23 +18,20 @@ import java.util.stream.Collectors;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-class H2CrusadeEntity {
+public class H2CrusadeEntity {
 
     @EmbeddedId
     private H2CrusadeIdEntity id;
 
-    private String username;
-
     @OneToMany(mappedBy = "crusade")
     List<H2CrusadeForceEntity> h2CrusadeForces;
 
-    Crusade toCrusade() {
+    public Crusade toCrusade() {
         var crusadeForces = h2CrusadeForces.stream()
                 .map(H2CrusadeForceEntity::toCrusadeForce)
                 .collect(Collectors.toList());
 
-        return new Crusade(CrusadeId.of(id.getValue()),
-                username,
+        return Crusade.create(CrusadeId.of(id.getValue()),
                 crusadeForces);
     }
 }

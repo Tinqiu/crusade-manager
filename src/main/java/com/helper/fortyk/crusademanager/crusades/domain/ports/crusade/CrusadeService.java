@@ -1,7 +1,8 @@
-package com.helper.fortyk.crusademanager.crusades.domain.ports;
+package com.helper.fortyk.crusademanager.crusades.domain.ports.crusade;
 
 import com.helper.fortyk.crusademanager.crusades.domain.model.crusade.Crusade;
 import com.helper.fortyk.crusademanager.crusades.domain.model.crusade.CrusadeId;
+import com.helper.fortyk.crusademanager.crusades.domain.model.crusadeforce.CrusadeForce;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +15,11 @@ public class CrusadeService {
         return crusadeRepository.getById(crusadeId);
     }
 
-    public CrusadeId create(String username){
-        return crusadeRepository.create(username);
+    public CrusadeId create(CrusadeForce crusadeForce1,
+                            CrusadeForce crusadeForce2,
+                            CrusadeForce... crusadeForces){
+        return crusadeRepository.create(crusadeForce1,
+                crusadeForce2,
+                crusadeForces);
     }
 }
