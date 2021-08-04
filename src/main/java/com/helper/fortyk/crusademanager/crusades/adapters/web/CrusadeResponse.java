@@ -13,14 +13,10 @@ class CrusadeResponse {
     private final String id;
 
     @JsonProperty
-    private final String username;
-
-    @JsonProperty
     private final List<CrusadeForce> crusadeForces;
 
     public static CrusadeResponse of(Crusade crusade) {
         return new CrusadeResponse(crusade.getId().getValue(),
-                crusade.getUsername(),
                 crusade.getCrusadeForces());
     }
 }
