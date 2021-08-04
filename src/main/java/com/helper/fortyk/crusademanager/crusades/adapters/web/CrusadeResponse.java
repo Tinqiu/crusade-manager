@@ -1,8 +1,8 @@
 package com.helper.fortyk.crusademanager.crusades.adapters.web;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.helper.fortyk.crusademanager.crusades.domain.model.crusade.Crusade;
-import com.helper.fortyk.crusademanager.crusades.domain.model.crusadeforce.CrusadeForce;
+import com.helper.fortyk.crusademanager.crusades.domain.crusade.model.Crusade;
+import com.helper.fortyk.crusademanager.crusades.domain.crusadeforce.model.CrusadeForce;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;

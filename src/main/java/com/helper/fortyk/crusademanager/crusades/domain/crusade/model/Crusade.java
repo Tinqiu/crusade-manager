@@ -1,6 +1,6 @@
-package com.helper.fortyk.crusademanager.crusades.domain.model.crusade;
+package com.helper.fortyk.crusademanager.crusades.domain.crusade.model;
 
-import com.helper.fortyk.crusademanager.crusades.domain.model.crusadeforce.CrusadeForce;
+import com.helper.fortyk.crusademanager.crusades.domain.crusadeforce.model.CrusadeForce;
 import lombok.Data;
 
 import java.util.ArrayList;

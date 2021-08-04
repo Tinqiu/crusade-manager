@@ -1,4 +1,4 @@
-package com.helper.fortyk.crusademanager.crusades.domain.model.crusadeforce;
+package com.helper.fortyk.crusademanager.crusades.domain.crusadeforce.model;
 
 import lombok.RequiredArgsConstructor;
 

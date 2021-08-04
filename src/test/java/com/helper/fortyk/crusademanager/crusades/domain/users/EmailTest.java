@@ -1,5 +1,6 @@
-package com.helper.fortyk.crusademanager.crusades.domain.model.users;
+package com.helper.fortyk.crusademanager.crusades.domain.users;
 
+import com.helper.fortyk.crusademanager.crusades.domain.users.model.Email;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;

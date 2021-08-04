@@ -1,6 +1,6 @@
 package com.helper.fortyk.crusademanager.crusades.adapters.web;
 
-import com.helper.fortyk.crusademanager.crusades.domain.model.crusadeforce.CrusadeForce;
+import com.helper.fortyk.crusademanager.crusades.domain.crusadeforce.model.CrusadeForce;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 

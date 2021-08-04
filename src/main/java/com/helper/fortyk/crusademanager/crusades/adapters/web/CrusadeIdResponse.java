@@ -1,7 +1,7 @@
 package com.helper.fortyk.crusademanager.crusades.adapters.web;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.helper.fortyk.crusademanager.crusades.domain.model.crusade.CrusadeId;
+import com.helper.fortyk.crusademanager.crusades.domain.crusade.model.CrusadeId;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

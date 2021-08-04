@@ -1,4 +1,4 @@
-package com.helper.fortyk.crusademanager.crusades.domain.model.users;
+package com.helper.fortyk.crusademanager.crusades.domain.users.model;
 
 import lombok.AccessLevel;
 import lombok.Getter;

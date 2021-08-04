@@ -1,8 +1,8 @@
-package com.helper.fortyk.crusademanager.crusades.domain.ports.crusade;
+package com.helper.fortyk.crusademanager.crusades.domain.crusade.ports;
 
-import com.helper.fortyk.crusademanager.crusades.domain.model.crusade.Crusade;
-import com.helper.fortyk.crusademanager.crusades.domain.model.crusade.CrusadeId;
-import com.helper.fortyk.crusademanager.crusades.domain.model.crusadeforce.CrusadeForce;
+import com.helper.fortyk.crusademanager.crusades.domain.crusade.model.Crusade;
+import com.helper.fortyk.crusademanager.crusades.domain.crusade.model.CrusadeId;
+import com.helper.fortyk.crusademanager.crusades.domain.crusadeforce.model.CrusadeForce;
 
 /**
  * Represents the outbound Persistence port of the {@link Crusade} domain entity.

@@ -1,6 +1,6 @@
-package com.helper.fortyk.crusademanager.crusades.domain.model.users;
+package com.helper.fortyk.crusademanager.crusades.domain.users.model;
 
-import com.helper.fortyk.crusademanager.crusades.domain.model.crusadeforce.CrusadeForce;
+import com.helper.fortyk.crusademanager.crusades.domain.crusadeforce.model.CrusadeForce;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.helper.fortyk.crusademanager.crusades.domain.ports.crusadeforce;
+package com.helper.fortyk.crusademanager.crusades.domain.crusadeforce.ports;
 
 import org.springframework.stereotype.Service;
 

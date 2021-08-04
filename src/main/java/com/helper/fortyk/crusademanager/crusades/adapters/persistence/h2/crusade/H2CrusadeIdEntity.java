@@ -1,6 +1,6 @@
 package com.helper.fortyk.crusademanager.crusades.adapters.persistence.h2.crusade;
 
-import com.helper.fortyk.crusademanager.crusades.domain.model.crusade.CrusadeId;
+import com.helper.fortyk.crusademanager.crusades.domain.crusade.model.CrusadeId;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

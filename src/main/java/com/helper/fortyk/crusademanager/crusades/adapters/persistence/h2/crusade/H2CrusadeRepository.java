@@ -1,9 +1,9 @@
 package com.helper.fortyk.crusademanager.crusades.adapters.persistence.h2.crusade;
 
-import com.helper.fortyk.crusademanager.crusades.domain.model.crusade.Crusade;
-import com.helper.fortyk.crusademanager.crusades.domain.model.crusade.CrusadeId;
-import com.helper.fortyk.crusademanager.crusades.domain.model.crusadeforce.CrusadeForce;
-import com.helper.fortyk.crusademanager.crusades.domain.ports.crusade.CrusadeRepositoryPort;
+import com.helper.fortyk.crusademanager.crusades.domain.crusade.model.Crusade;
+import com.helper.fortyk.crusademanager.crusades.domain.crusade.model.CrusadeId;
+import com.helper.fortyk.crusademanager.crusades.domain.crusade.ports.CrusadeRepositoryPort;
+import com.helper.fortyk.crusademanager.crusades.domain.crusadeforce.model.CrusadeForce;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 

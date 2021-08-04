@@ -1,7 +1,7 @@
 package com.helper.fortyk.crusademanager.crusades.adapters.web;
 
-import com.helper.fortyk.crusademanager.crusades.domain.model.crusade.CrusadeId;
-import com.helper.fortyk.crusademanager.crusades.domain.ports.crusade.CrusadeService;
+import com.helper.fortyk.crusademanager.crusades.domain.crusade.model.CrusadeId;
+import com.helper.fortyk.crusademanager.crusades.domain.crusade.ports.CrusadeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -1,8 +1,8 @@
 package com.helper.fortyk.crusademanager.crusades.adapters.persistence.h2.crusadeforce;
 
 import com.helper.fortyk.crusademanager.crusades.adapters.persistence.h2.crusade.H2CrusadeEntity;
-import com.helper.fortyk.crusademanager.crusades.domain.model.crusadeforce.CrusadeForce;
-import com.helper.fortyk.crusademanager.crusades.domain.model.crusadeforce.Faction;
+import com.helper.fortyk.crusademanager.crusades.domain.crusadeforce.model.CrusadeForce;
+import com.helper.fortyk.crusademanager.crusades.domain.crusadeforce.model.Faction;
 
 import javax.persistence.*;
 import java.util.ArrayList;

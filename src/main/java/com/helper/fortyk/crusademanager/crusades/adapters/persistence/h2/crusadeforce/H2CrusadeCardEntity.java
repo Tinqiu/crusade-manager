@@ -1,6 +1,6 @@
 package com.helper.fortyk.crusademanager.crusades.adapters.persistence.h2.crusadeforce;
 
-import com.helper.fortyk.crusademanager.crusades.domain.model.crusadeforce.CrusadeCard;
+import com.helper.fortyk.crusademanager.crusades.domain.crusadeforce.model.CrusadeCard;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
