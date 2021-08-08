@@ -1,4 +1,4 @@
-package com.helper.fortyk.crusademanager.crusades.adapters.web;
+package com.helper.fortyk.crusademanager.crusades.adapters.web.crusade;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.helper.fortyk.crusademanager.crusades.domain.crusade.model.Crusade;

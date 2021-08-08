@@ -15,11 +15,8 @@ public class CrusadeService {
         return crusadeRepository.getById(crusadeId);
     }
 
-    public CrusadeId create(CrusadeForce crusadeForce1,
-                            CrusadeForce crusadeForce2,
-                            CrusadeForce... crusadeForces){
-        return crusadeRepository.create(crusadeForce1,
-                crusadeForce2,
-                crusadeForces);
+    public CrusadeId create(CrusadeForce crusadeForce){
+        var newCrusade = Crusade.create(crusadeForce);
+        return crusadeRepository.create(newCrusade);
     }
 }

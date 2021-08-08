@@ -1,4 +1,4 @@
-package com.helper.fortyk.crusademanager.crusades.adapters.web;
+package com.helper.fortyk.crusademanager.crusades.adapters.web.crusade;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

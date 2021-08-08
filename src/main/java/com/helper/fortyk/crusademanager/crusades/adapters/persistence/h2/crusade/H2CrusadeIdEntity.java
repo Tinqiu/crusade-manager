@@ -2,8 +2,8 @@ package com.helper.fortyk.crusademanager.crusades.adapters.persistence.h2.crusad
 
 import com.helper.fortyk.crusademanager.crusades.domain.crusade.model.CrusadeId;
 import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Embeddable;
 import java.io.Serializable;
@@ -11,15 +11,22 @@ import java.util.UUID;
 
 @Getter
 @Embeddable
-@AllArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 class H2CrusadeIdEntity implements Serializable {
     private String value;
 
-    public H2CrusadeIdEntity() {
-        this.value = UUID.randomUUID().toString();
+    private H2CrusadeIdEntity(String value) {
+        this.value = value;
     }
 
+    public static H2CrusadeIdEntity create(){
+        return new H2CrusadeIdEntity(UUID.randomUUID().toString());
+    }
     public static H2CrusadeIdEntity of(CrusadeId crusadeId) {
         return new H2CrusadeIdEntity(crusadeId.getValue());
+    }
+
+    public CrusadeId toCrusadeId() {
+        return CrusadeId.of(value);
     }
 }

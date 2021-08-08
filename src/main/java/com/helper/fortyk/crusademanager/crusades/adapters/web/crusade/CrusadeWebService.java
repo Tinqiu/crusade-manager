@@ -1,4 +1,4 @@
-package com.helper.fortyk.crusademanager.crusades.adapters.web;
+package com.helper.fortyk.crusademanager.crusades.adapters.web.crusade;
 
 import com.helper.fortyk.crusademanager.crusades.domain.crusade.model.CrusadeId;
 import com.helper.fortyk.crusademanager.crusades.domain.crusade.ports.CrusadeService;
@@ -16,9 +16,7 @@ class CrusadeWebService {
     }
 
     public CrusadeIdResponse create(CrusadeRequest crusadeRequest) {
-        var crusadeId = crusadeService.create(
-                crusadeRequest.getCrusadeForce1(),
-                crusadeRequest.getCrusadeForce2());
+        var crusadeId = crusadeService.create(crusadeRequest.getCrusadeForce());
         return CrusadeIdResponse.of(crusadeId);
     }
 }

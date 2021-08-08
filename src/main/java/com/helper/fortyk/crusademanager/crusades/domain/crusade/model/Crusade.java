@@ -16,8 +16,13 @@ public class Crusade {
         this.crusadeForces.addAll(crusadeForces);
     }
 
-    public static Crusade create(CrusadeId id,
-                                 List<CrusadeForce> crusadeForces) {
+    public static Crusade create(CrusadeForce crusadeForce){
+        var id = CrusadeId.create();
+        return new Crusade(id, List.of(crusadeForce));
+    }
+
+    public static Crusade of(CrusadeId id,
+                             List<CrusadeForce> crusadeForces) {
         return new Crusade(id, crusadeForces);
     }
 }

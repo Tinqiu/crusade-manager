@@ -2,7 +2,7 @@ package com.helper.fortyk.crusademanager.crusades.adapters.persistence.h2.crusad
 
 import com.helper.fortyk.crusademanager.crusades.adapters.persistence.h2.crusade.H2CrusadeEntity;
 import com.helper.fortyk.crusademanager.crusades.domain.crusadeforce.model.CrusadeForce;
-import com.helper.fortyk.crusademanager.crusades.domain.crusadeforce.model.Faction;
+import com.helper.fortyk.crusademanager.crusades.domain.crusadeforce.model.factions.FactionType;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -16,7 +16,7 @@ public class H2CrusadeForceEntity {
     private Long id;
 
     @Enumerated(value = EnumType.STRING)
-    private Faction faction;
+    private FactionType faction;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private H2CrusadeEntity crusade;
@@ -29,6 +29,14 @@ public class H2CrusadeForceEntity {
         var cards = crusadeCards.stream()
                 .map(H2CrusadeCardEntity::toCrusadeCard)
                 .collect(Collectors.toList());
-        return new CrusadeForce(faction, cards);
+        return CrusadeForce.of(faction, cards);
+    }
+
+    public static H2CrusadeForceEntity of(CrusadeForce crusadeForce) {
+       var h2Cards = crusadeForce.getCrusadeCards().stream()
+                .map(H2CrusadeCardEntity::fromCrusadeCard)
+                .collect(Collectors.toList());
+       var factionType = crusadeForce.getFaction().getType();
+        return new H2CrusadeForceEntity();
     }
 }

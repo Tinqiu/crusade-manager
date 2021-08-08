@@ -14,10 +14,15 @@ public class H2CrusadeCardEntity {
     private int id;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name = H2CrusadeForceEntity.CRUSADE_CARD_JOIN_COL, nullable = false)
+    @JoinColumn(name = H2CrusadeForceEntity.CRUSADE_CARD_JOIN_COL)
     private H2CrusadeForceEntity crusadeForce;
 
     public CrusadeCard toCrusadeCard(){
         return new CrusadeCard();
+    }
+
+
+    public static H2CrusadeCardEntity fromCrusadeCard(CrusadeCard card) {
+        return null;
     }
 }

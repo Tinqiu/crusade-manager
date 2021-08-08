@@ -3,11 +3,10 @@ package com.helper.fortyk.crusademanager.crusades.adapters.persistence.h2.crusad
 import com.helper.fortyk.crusademanager.crusades.domain.crusade.model.Crusade;
 import com.helper.fortyk.crusademanager.crusades.domain.crusade.model.CrusadeId;
 import com.helper.fortyk.crusademanager.crusades.domain.crusade.ports.CrusadeRepositoryPort;
-import com.helper.fortyk.crusademanager.crusades.domain.crusadeforce.model.CrusadeForce;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
-import java.util.Collections;
+import java.util.Optional;
 
 /**
  * H2 implementation of the {@link CrusadeRepositoryPort} interface.
@@ -18,16 +17,14 @@ class H2CrusadeRepository implements CrusadeRepositoryPort {
     private final H2JpaCrusadeRepository jpaCrusadeRepository;
 
     @Override
-    public Crusade getById(CrusadeId id) {
-        return jpaCrusadeRepository.getById(H2CrusadeIdEntity.of(id)).toCrusade();
+    public Optional<Crusade> getById(CrusadeId id) {
+        var maybeCrusade = jpaCrusadeRepository.findById(H2CrusadeIdEntity.of(id));
+        return maybeCrusade.map(H2CrusadeEntity::toCrusade);
     }
 
     @Override
-    public CrusadeId create(CrusadeForce crusadeForce1,
-                            CrusadeForce crusadeForce2,
-                            CrusadeForce... crusadeForces) {
-        var h2Crusade = new H2CrusadeEntity(new H2CrusadeIdEntity(),
-                Collections.emptyList());
+    public CrusadeId create(Crusade crusade) {
+        var h2Crusade = H2CrusadeEntity.of(crusade);
         return jpaCrusadeRepository.save(h2Crusade).toCrusade().getId();
     }
 }
